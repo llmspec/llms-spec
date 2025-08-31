@@ -41,6 +41,21 @@ With `LLMS.md`, AI tools (Copilot, Cursor, Claude Code, Gemini CLI, etc.) can:
 
 ---
 
+### Vision Caption
+
+llms.txt (for websites) and LLMS.md (for repos) are two sides of the same coin: lightweight, root-level files that give LLMs curated context. Services like **gitingest** can consume these specs to produce clean, structured input for models. Together, they reduce noise, improve attribution, and make AI-assisted tools more reliable.
+
+```mermaid
+flowchart TD
+    A[Website Root] -->|/llms.txt| B[LLMs]
+    C[Code Repository Root] -->|/LLMS.md| B[LLMs]
+    B -->|Context-aware responses| D[Developers & Users]
+    C -->|Repo data| E[gitingest.com / similar tools]
+    E -->|Respects LLMS.md| B
+```
+
+---
+
 ## Status
 
 - 🚧 Draft v0.1 — feedback welcome  

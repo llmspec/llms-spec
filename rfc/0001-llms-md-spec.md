@@ -1,10 +1,10 @@
-# RFC: LLMS.md Specification (v0.2)
+# RFC: LLMS.md Specification
 
 **RFC Metadata**
 
 * **Author:** Huan Li (@huan)
 * **Date:** 2025-08-31
-* **Status:** Draft v0.2
+* **Status:** Draft v0.3
 * **Repository:** [llmspec/llms-spec](https://github.com/llmspec/llms-spec)
 * **License:** MIT
 
@@ -161,13 +161,31 @@ This RFC encourages coexistence, with eventual unification if standards merge.
 
 ---
 
-## 7. Future Work
+## 7. Vision: Ecosystem Alignment
+
+The design of `LLMS.md` aligns with two important ecosystem trends:
+
+* **`llms.txt` (web)**: A lightweight file at the root of websites that guides LLMs to key content. `LLMS.md` extends the same philosophy into code repositories, offering a predictable root-level file that curates what matters most.
+* **Services like [gitingest.com](https://gitingest.com)**: Tools that flatten a GitHub repo into an LLM-readable context string. With `LLMS.md`, such services can respect maintainer-provided hints (important dirs, ignore lists, test commands) instead of guessing.
+
+Together, these form a unified movement: curated, LLM-friendly context across both web and code ecosystems.
+
+* `llms.txt` → website content
+* `LLMS.md` → repository content
+* gitingest & similar tools → renderers that consume the spec
+
+This synergy ensures less noise, better attribution, and a stronger developer–LLM feedback loop.
+
+---
+
+## 8. Future Work
 
 * Schema definition (YAML/JSON) for strict machine parsing.
 * Repo linters/validators for `LLMS.md`.
 * IDE/CLI integration (Copilot, Cursor, Gemini CLI, Claude Code).
 * Alignment with [Model Context Protocol (MCP)](https://github.com/modelcontextprotocol).
 * Exploration of merged formats with `AGENTS.md`.
+* Tight integration with `llms.txt` and ingestion tools.
 
 ---
 
