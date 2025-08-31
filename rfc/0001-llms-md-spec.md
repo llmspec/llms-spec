@@ -1,10 +1,10 @@
-# RFC: LLMS.md Specification
+# RFC: LLMS.md Specification (v0.1)
 
 **RFC Metadata**
 
 * **Author:** Huan Li (@huan)
 * **Date:** 2025-08-31
-* **Status:** Draft v0.3
+* **Status:** Draft v0.1
 * **Repository:** [llmspec/llms-spec](https://github.com/llmspec/llms-spec)
 * **License:** MIT
 
@@ -178,7 +178,42 @@ This synergy ensures less noise, better attribution, and a stronger developer–
 
 ---
 
-## 8. Future Work
+## 8. FAQ
+
+**Q: Isn’t this the same as `AGENTS.md`?**
+A: Not quite.
+
+* `AGENTS.md` = broad, freeform instructions for any coding agent.
+* `LLMS.md` = structured, schema-like metadata tailored to LLMs (dirs, entry points, ignore lists, run/test).
+  They’re complementary: one is human notes, the other is machine-parseable context.
+
+---
+
+**Q: Why not just reuse `README.md`?**
+A: READMEs are for humans — often long, cluttered with badges, or marketing-heavy. LLMs need a *predictable structure* they can parse every time. That’s what `LLMS.md` provides.
+
+---
+
+**Q: Why not JSON or YAML?**
+A: Markdown hits the sweet spot: human-readable, GitHub-native, easy to parse. Later, we may define a strict schema (YAML/JSON), but step one is adoption.
+
+---
+
+**Q: How does this relate to `llms.txt`?**
+A: It’s the repo twin of `llms.txt` (websites).
+
+* `llms.txt` → tells LLMs what matters on your website.
+* `LLMS.md` → tells LLMs what matters in your repo.
+  Together, they form a consistent ecosystem.
+
+---
+
+**Q: Where do tools like gitingest fit in?**
+A: gitingest already flattens repos into an LLM-readable string. With `LLMS.md`, it could respect maintainer-provided hints (important dirs, ignore lists, test commands) instead of guessing.
+
+---
+
+## 9. Future Work
 
 * Schema definition (YAML/JSON) for strict machine parsing.
 * Repo linters/validators for `LLMS.md`.
