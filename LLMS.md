@@ -38,4 +38,8 @@
 
 ---
 
+> ℹ️ This repository also includes [AGENTS.md](./AGENTS.md).  
+> `LLMS.md` provides **structured, machine-parseable context** for LLMs.  
+> For broader, freeform guidance to coding agents, see `AGENTS.md`.
+
 For more details, see the [RFC document](./rfc/0001-llms-md-spec.md).

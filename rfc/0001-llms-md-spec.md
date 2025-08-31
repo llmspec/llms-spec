@@ -1,10 +1,10 @@
-# RFC: LLMS.md Specification (v0.1)
+# RFC: LLMS.md Specification (v0.2)
 
 **RFC Metadata**
 
 * **Author:** Huan Li (@huan)
 * **Date:** 2025-08-31
-* **Status:** Draft v0.1
+* **Status:** Draft v0.2
 * **Repository:** [llmspec/llms-spec](https://github.com/llmspec/llms-spec)
 * **License:** MIT
 
@@ -27,7 +27,7 @@ It is inspired by [`llms.txt`](https://llmstxt.org) for websites, `robots.txt`, 
 ## 2. Location and Format
 
 * File **must** be placed in the repository root.
-* File **should** be named \`\`.
+* File **should** be named `LLMS.md`.
 * Tools **should also accept** `llms.md` (alias), similar to `README.md` vs `readme.md`.
 * Encoding: UTF-8.
 * Recommended size: ≤100 KB.
@@ -142,14 +142,34 @@ Implements Clean Architecture with modular packages.
 
 ---
 
-## 6. Future Work
+## 6. Relationship to `AGENTS.md`
+
+`AGENTS.md` has recently emerged in the community as a general-purpose convention for guiding coding agents. It is already supported by GitHub Copilot and widely adopted across thousands of repositories.
+
+`LLMS.md` is designed to be **complementary**:
+
+* `AGENTS.md` is broad and agent-centric: freeform instructions for any AI agent.
+* `LLMS.md` is narrower and structured: schema-like metadata for LLMs to reliably parse.
+
+### Compatibility Guidance
+
+* Repositories may include both files. Cross-link them at the top of each file.
+* If both exist, `AGENTS.md` can host high-level guidance while `LLMS.md` provides structured, machine-parseable context.
+* In future, tools may converge to support `LLMS.md` sections embedded within `AGENTS.md` (e.g., fenced blocks).
+
+This RFC encourages coexistence, with eventual unification if standards merge.
+
+---
+
+## 7. Future Work
 
 * Schema definition (YAML/JSON) for strict machine parsing.
 * Repo linters/validators for `LLMS.md`.
 * IDE/CLI integration (Copilot, Cursor, Gemini CLI, Claude Code).
 * Alignment with [Model Context Protocol (MCP)](https://github.com/modelcontextprotocol).
+* Exploration of merged formats with `AGENTS.md`.
 
 ---
 
-✅ **Canonical name: **`\
-🔄 **Alias: **`** accepted for portability**
+✅ **Canonical name: `LLMS.md`**
+🔄 **Alias: `llms.md` accepted for portability**
